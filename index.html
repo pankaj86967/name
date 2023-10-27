@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clock</title>
+    <style>
+        .body{
+            margin:  0px auto;
+            padding: 0px ;
+            /* position: absolute; */
+            /* margin: ; */
+        }
+        .container{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(119, 101, 101);
+        }
+        .box{
+            margin: 0px auto;
+            box-shadow: 1px 1px 50px rgb(0, 0, 0);
+            position: relative;
+            width: 300px;
+            background-image: url("./images.png");
+            background-size: cover;
+            height: 300px;
+            /* background-color: aqua; */
+            border: 2px solid rgb(196, 12, 12);
+            border-radius: 50%;
+        }
+        .box1{
+            width: 270px;
+            height: 270px;
+            box-shadow: 3px 3px 10px violet;
+            
+            border-radius: 50%;
+            border: 2px solid green;
+            position: absolute;
+        }
+        .hr{
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            border-radius: 4px;
+            background-color: blue;
+            margin: 150px; 
+            transform-origin: center left ;
+            animation: hour 90s linear infinite; 
+            
+
+        }
+        @keyframes hour{
+           
+            0% { transform: rotate(0 deg);            
+            }
+            100% { transform: rotate(360deg); 
+
+            }
+        }
+        .min{ width: 60px;
+            height: 3px;
+            border-radius: 4px;
+            background-color: rgb(102, 255, 0);
+            margin: 150px; 
+            position: absolute;
+            rotate: 50deg;
+            transform-origin: center left ;
+            animation: min 30s linear infinite;
+
+        }
+        @keyframes min{
+           
+           0% { transform: rotate(0 deg);            
+           }
+           100% { transform: rotate(360deg); 
+
+           }
+       }
+        
+        .sec{ width: 65px;
+            height: 3px;
+            border-radius: 4px;
+            background-color: rgb(255, 0, 170);
+            margin: 150px; 
+            position: absolute;
+            rotate: -90deg;
+            transform-origin: center left;
+            animation: sec 60s linear infinite;
+
+        }
+        @keyframes sec{
+           
+           0% { transform: rotate(0 deg);            
+           }
+           100% { transform: rotate(360deg); 
+
+           }
+       }
+        .cen{
+            width: 10px;
+            height: 10px;
+            background-color: black;
+    position: absolute;
+    margin: -155px 608px;
+    border-radius: 50%;
+    z-index: 1000;
+}
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="hr"></div>
+            <div class="min"></div>
+            <div class="sec"></div>
+
+        </div>
+        <div class="box1"></div>
+        <div class="cen"></div>
+    </div>
+    
+</body>
+</html>
